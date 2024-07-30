@@ -1,0 +1,20 @@
+構築
+
+rbenv local 3.2.4 
+echo "gem: --no-document" >> ~/.gemrc
+rails new sample
+
+----------------------------------------
+起動
+
+rails
+
+----------------------------------------
+参考
+
+・Render
+https://dashboard.render.com/web/srv-cqjdotuehbks73ca39eg/logs
+
+・Scaffold
+rails generate scaffold User name:string email:string
+rails db:migrate
