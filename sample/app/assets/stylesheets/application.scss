@@ -13,18 +13,18 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
+@import "bootstrap";
 
- #mask {
+#mask {
     background: rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-}
-#mask.hidden {
-    display: none;
+    &.hidden {
+        display: none;
+    }
 }
 
 #modal {
@@ -39,7 +39,7 @@
     border-radius: 4px;
     transition-property: transform;
     transition-duration: 0.5s;
-}
-#modal.hidden {
-    transform: translate(0, -500px);
+    &.hidden {
+        transform: translate(0, -500px);
+    }
 }
