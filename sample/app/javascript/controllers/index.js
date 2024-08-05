@@ -9,3 +9,21 @@ eagerLoadControllersFrom("controllers", application)
 // Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
+
+const open = document.querySelector('#open')
+const close = document.querySelector('#close')
+const mask = document.querySelector('#mask')
+
+open.addEventListener('click', () => {
+    modal.classList.remove('hidden')
+    mask.classList.remove('hidden')
+})
+
+close.addEventListener('click', () => {
+    modal.classList.add('hidden')
+    mask.classList.add('hidden')
+})
+
+mask.addEventListener('click', () => {
+    close.click()
+})
