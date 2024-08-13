@@ -9,7 +9,16 @@ html
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
     body
-        header.navbar
+        header.navbar.navbar-fixed-top.navbar-inverse
             .container
             = link_to "sample app", '#', id: "logo"
-        = yield
+            nav
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        = link_to "Home", '#'
+                    li
+                        = link_to "Help", '#'
+                    li
+                        = link_to "Log", '#'
+        .container
+            = yield
