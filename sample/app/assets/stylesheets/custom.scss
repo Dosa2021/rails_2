@@ -1,5 +1,7 @@
 @import "bootstrap";
 
+$light-gray: #777;
+
 /* universal */
 * {
     margin: 0;
@@ -11,6 +13,13 @@ section {
 }
 textarea {
     resize: vertical;
+}
+.main {
+    a {
+        .mei {
+            width: 100%;
+        }
+    }
 }
 .center {
     text-align: center;
@@ -44,7 +53,7 @@ footer {
     margin-top: 45px;
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
-    color: #777;
+    color: $light-gray;
     a {
         color: #555;
         &:hover {
