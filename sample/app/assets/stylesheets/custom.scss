@@ -82,3 +82,11 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 900px) {
+    .main {
+        h1 {
+            font-size: 25px;
+        }
+    }
+}
