@@ -2,6 +2,12 @@
 
 $light-gray: #777;
 
+@mixin box_sizing {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+}
+
 /* universal */
 * {
     margin: 0;
@@ -36,6 +42,17 @@ textarea {
     h1 {
         margin-bottom: 10px;
     }
+}
+
+/* forms */
+input, textarea {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+    @include box_sizing;
+}
+input {
+    height: auto !important;
 }
 
 /* header */
