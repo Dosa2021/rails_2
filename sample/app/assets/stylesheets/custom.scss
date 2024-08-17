@@ -29,7 +29,6 @@ textarea {
     resize: vertical;
 }
 .main {
-    padding-top: 10px;
     h1 {
         font-family: serif;
         font-size: 45px;
@@ -184,8 +183,10 @@ footer {
 
 @media screen and (max-width: 900px) {
     .main {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
         h1 {
-            font-size: 25px;
+            font-size: 20px;
         }
     }
 }
