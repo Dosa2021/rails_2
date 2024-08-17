@@ -31,6 +31,7 @@ textarea {
     h1 {
         font-family: serif;
         font-size: 45px;
+        padding: 7px;
     }
     h2 {
         font-size: 10px;
@@ -42,6 +43,9 @@ textarea {
         .mei {
             width: 100%;
         }
+    }
+    .signup {
+        margin: 10px;
     }
 }
 .center {
@@ -84,11 +88,11 @@ header {
         color: #fff;
     }
     #logo {
+        font-family: cursive;
         float: left;
-        margin-right: 10px;
+        margin: auto;
         font-size: 1.7em;
         color: #fff;
-        text-transform: uppercase;
         letter-spacing: -1px;
         padding-top: 9px;
         font-weight: bold;
