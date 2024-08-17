@@ -103,6 +103,11 @@ header {
 }
 
 /* Dropdown menu */
+.dropdown-menu {
+    a {
+        color: #000;
+    }
+}
 .dropdown-menu.active {
     display: block;
 }
