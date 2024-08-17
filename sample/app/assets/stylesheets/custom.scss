@@ -102,6 +102,11 @@ header {
     }
 }
 
+/* Dropdown menu */
+.dropdown-menu.active {
+    display: block;
+}
+
 /* sidebar */
 aside {
     section.user_info {
