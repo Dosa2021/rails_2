@@ -2,6 +2,10 @@
 .row
     aside.col-md-4
         section.user_info
+            = link_to image_tag("ume.jpeg", class: "ume", alt: "ume"), "https://www.daigothebeast.com/"
             h1
-                = gravatar_for @user
                 = @user.name
+            .score
+                p レベル: 1
+                p 攻撃力: 1
+                p 防御力: 1
