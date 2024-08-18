@@ -1,8 +1,25 @@
 header.navbar.navbar-fixed-top.navbar-inverse
     .container
     = link_to "You and Mei", root_path, id: "logo"
-    /nav
-    /    ul.nav.navbar-nav.navbar-right
+    nav
+        ul.nav.navbar-nav.navbar-right
+            - if logged_in?
+                = link_to "Users", '#'
+                .dropdown
+                    a#account.dropdown-toggle href="#"
+                        | Account
+                        b.caret
+                    ul#dropdown-menu.dropdown-menu
+                        li
+                            = link_to "Profile", current_user
+                        li
+                            = link_to "Settings", '#'
+                        li.divider
+                        li
+                            = link_to "Log out", logout_path, data: { "turbo-method": :delete }
+            - else
+                li
+                    = link_to "Login", '/login'
     /        li
     /            = link_to "Home", root_path
     /        li

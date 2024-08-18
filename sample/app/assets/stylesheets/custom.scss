@@ -2,6 +2,7 @@
 
 $light-gray: #777;
 $state-danger-text: red;
+$a-tag-font-size: 13px;
 
 @mixin box_sizing {
     -moz-box-sizing:    border-box;
@@ -17,6 +18,7 @@ $state-danger-text: red;
 
 a {
     text-decoration: none;
+    font-size: $a-tag-font-size;
 }
 
 // body {}
@@ -27,7 +29,6 @@ textarea {
     resize: vertical;
 }
 .main {
-    padding-top: 10px;
     h1 {
         font-family: serif;
         font-size: 45px;
@@ -40,6 +41,7 @@ textarea {
         font-size: 5px;
     }
     a {
+        font-size: $a-tag-font-size;
         .mei {
             width: 100%;
         }
@@ -88,19 +90,28 @@ header {
         color: #fff;
     }
     #logo {
-        font-family: cursive;
+        font-family: fantasy;
         float: left;
-        margin: auto;
         font-size: 1.7em;
         color: #fff;
         letter-spacing: -1px;
-        padding-top: 9px;
+        padding-top: 10px;
         font-weight: bold;
         &:hover {
             color: #fff;
             text-decoration: none;
         }
     }
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    a {
+        color: #000;
+    }
+}
+.dropdown-menu.active {
+    display: block;
 }
 
 /* sidebar */
@@ -172,8 +183,10 @@ footer {
 
 @media screen and (max-width: 900px) {
     .main {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
         h1 {
-            font-size: 25px;
+            font-size: 20px;
         }
     }
 }
