@@ -13,11 +13,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      forwarding_url = session[:forwarding_url]
       reset_session
       log_in @user
       flash[:success] = "新規ユーザーを作成しました。"
-      redirect_to @user
+      redirect_to forwarding_url || @user
     else
+      flash.now[:danger] = 'Invalid email/password combination'
       render 'new', status: :unprocessable_entity
     end
   end
@@ -39,6 +41,7 @@ class UsersController < ApplicationController
   # before_action
   def logged_in_user
     unless logged_in?
+      store_location
       flash[:danger] = "Please log in."
       redirect_to login_url, status: :see_other
     end
