@@ -9,3 +9,10 @@
                 p レベル: 1
                 p 攻撃力: 1
                 p 防御力: 1
+    .col-md-8
+        h3 Microposts
+        - if @user.microposts.any?
+            h3 Microposts
+            = @user.microposts.count
+            ol.microposts
+                = render @microposts
