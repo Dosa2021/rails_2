@@ -12,6 +12,10 @@ class UsersController < ApplicationController
   end
 
   def new
+    User.genders.each do | rate |
+      puts t("enums.user.gender.#{rate[0]}")
+    end
+
     @user = User.new
   end
 
