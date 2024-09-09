@@ -4,6 +4,7 @@ li#micropost
   span.user
     = link_to micropost.user.name, micropost.user
   span.content= micropost.content
+  = image_tag(micropost.image)
   span.timestamp
     | Posted
     = time_ago_in_words(micropost.created_at)
