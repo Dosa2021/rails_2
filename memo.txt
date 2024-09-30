@@ -18,3 +18,9 @@ https://dashboard.render.com/web/srv-cqjdotuehbks73ca39eg/logs
 ・Scaffold
 rails generate scaffold User name:string email:string
 rails db:migrate
+
+・slim
+https://zenn.dev/nenenemo/articles/775be954bddb51
+
+・bootstrap
+https://qiita.com/arata0520/items/4330c2be8740bc560390
