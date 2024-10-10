@@ -1,0 +1,15 @@
+ul
+- @micropost.each do |micropost|
+    li#micropost
+    = micropost.id
+    span.user
+        = link_to micropost.user.name, micropost.user
+    span.content
+        = micropost.content
+    span.timestamp
+        | Posted
+        /TODO: 修正
+        /= time_ago_in_words(micropost.created_at)
+        | ago.
+        - if current_user == micropost.user
+        = link_to "delete", micropost, data: { "turbo-method": :delete, turbo_confirm: "You sure?" }
