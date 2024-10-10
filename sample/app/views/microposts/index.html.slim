@@ -1,5 +1,5 @@
 ul
-- @micropost.each do |micropost|
+- @microposts.each do |micropost|
     li#micropost
     = micropost.id
     span.user
@@ -13,3 +13,9 @@ ul
         | ago.
         - if current_user == micropost.user
         = link_to "delete", micropost, data: { "turbo-method": :delete, turbo_confirm: "You sure?" }
+
+- if logged_in?
+    .row
+        aside.col-md-4
+            section.micropost_form
+                = render 'shared/micropost_form'
