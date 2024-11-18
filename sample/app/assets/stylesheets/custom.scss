@@ -220,7 +220,6 @@ footer {
 }
 
 /* microposts */
-
 .row {
     // TODO: 強引に修正しているからきちんと修正したい
     margin: 0px !important;
@@ -267,5 +266,11 @@ span.image {
     margin-top: 10px;
     input {
         border: 0;
+    }
+}
+
+.micropost {
+    li.completed {
+        background-color: green;
     }
 }
