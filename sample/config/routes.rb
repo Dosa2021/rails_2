@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :users
   resources :microposts, only: [:create, :destroy]
   get '/microposts', to: 'static_pages#home'
+  get "/search", to: "searches#search"
 end

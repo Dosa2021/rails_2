@@ -48,4 +48,8 @@ class User < ApplicationRecord
     def feed
         Micropost.where("user_id = ?", id)
     end
+
+    def self.search_for(content)
+        User.where('name LIKE ?', '%' + content + '%')
+    end
 end
