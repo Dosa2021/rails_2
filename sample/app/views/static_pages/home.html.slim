@@ -1,0 +1,15 @@
+.center.jumbotron
+    - unless logged_in?
+        = link_to "Sign up", signup_path, class: "btn btn-lg btn-dark signup"
+    h1 たっちゃん、セックスしよっ
+    = link_to image_tag("mei.webp", class: "mei", alt: "Mei"), "https://www.stardust.co.jp/talent/section1/naganomei/"
+- if logged_in?
+    .row
+        aside.col-md-4
+            section.user_info
+                = render 'shared/user_info'
+            section.micropost_form
+                = render 'shared/micropost_form'
+        .col-md-8
+            h3 Micropost Feed
+            = render 'shared/feed'
